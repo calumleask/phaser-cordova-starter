@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    "paths": {
+      "@phaser-framework": ["./libs/phaser-framework"],
+      "~/*": ["*"]
+    }
+  },
+  "include": [
+    "**/*.ts"
+  ],
+  "typeRoots": [
+    "./node_modules/phaser/types"
+  ],
+  "types": [
+    "Phaser"
+  ]
+}

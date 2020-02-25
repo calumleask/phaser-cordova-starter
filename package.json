@@ -1,0 +1,51 @@
+{
+  "name": "phaser-starter",
+  "version": "1.0.0",
+  "description": "A template for games",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "android": "webpack --config webpack.config.js --env.cordova=true && cordova run android",
+    "browser": "webpack --config webpack.config.js --env.cordova=true && cordova run browser",
+    "dev": "webpack --config webpack.config.js --env.cordova=true --watch",
+    "server": "webpack-dev-server --env.cordova=false",
+    "prod": "webpack --config webpack.config.js --env.production=true --env.cordova=false",
+    "lint": "eslint --ext .ts src -c .eslintrc.json",
+    "get-framework": "sh ./scripts/update_framework.sh"
+  },
+  "author": "Calum Leask",
+  "license": "ISC",
+  "dependencies": {
+    "cordova-android": "^9.0.0",
+    "cordova-browser": "^6.0.0",
+    "cordova-plugin-browsersync-gen2": "^1.1.7",
+    "cordova-plugin-whitelist": "^1.3.4",
+    "phaser": "^3.24.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.3.0",
+    "eslint": "^7.12.1",
+    "terser-webpack-plugin": "^3.0.8",
+    "typescript": "^4.0.5",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-browsersync-gen2": {},
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "browser",
+      "android"
+    ]
+  }
+}
