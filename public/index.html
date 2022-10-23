@@ -5,6 +5,7 @@
       body {
         background-color: white;
         margin: 0;
+        overflow: hidden;
       }
       #game {
         box-sizing: border-box;
@@ -18,15 +19,15 @@
     <div id="game"></div>
     <script type="text/javascript">
       window.onload = () => {
-          const canvasContainer = document.getElementById("game");
-          console.log("Width: " + canvasContainer.clientWidth + "px");
-          console.log("Height: " + canvasContainer.clientHeight + "px");
-          game.start({
-            parent: "game",
-            width: canvasContainer.clientWidth,
-            height: canvasContainer.clientHeight
+        const canvasContainer = document.getElementById('game');
+        console.log('Width: ' + canvasContainer.clientWidth + 'px');
+        console.log('Height: ' + canvasContainer.clientHeight + 'px');
+        game.start({
+          parent: 'game',
+          width: canvasContainer.clientWidth,
+          height: canvasContainer.clientHeight,
         });
-      }
+      };
     </script>
   </body>
 </html>
